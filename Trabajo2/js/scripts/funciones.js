@@ -13,3 +13,7 @@ function pasar(){
 function cambiar(){
     document.getElementById("A1").style.color="black"; document.getElementById("A1").style.backgroundColor="Yellow";
 }
+
+function dblclick(){
+    document.getElementById("A1").style.color="white"; document.getElementById("A1").style.backgroundColor="blue"
+}
