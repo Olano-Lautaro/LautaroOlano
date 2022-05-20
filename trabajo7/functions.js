@@ -21,7 +21,7 @@ function    info()  {
         document.getElementById("sexo").innerHTML=('Sexo: ' +   data.results[0].gender);
         document.getElementById("edad").innerHTML=('Edad: ' +   data.results[0].dob.age);
         document.getElementById("email").innerHTML=('Email: '   +   data.results[0].email);
-        document.getElementById("foto").innerHTML=('Foto: ' + '<img src="${data.results[0].picture.large}"></img>');
+        document.getElementById("foto").innerHTML=('Foto:' + '<img src="${data.results[0].picture.large}"></img>');
     })
 
 }
