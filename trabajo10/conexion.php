@@ -12,22 +12,39 @@
         echo('Error de conexión con la Base de datos: '.$db);
     }else{
         //NO ERROR
-        echo('Conexión establecida <br>');
+        echo('Conexión establecida <br><br>');
 
-        $consulta=  "Select *   From Personas";
+        $consulta=  "SELECT*   FROM Personas";
 
         $resultado= mysqli_query($conexion, $consulta);
-
-        $fila=  mysqli_fetch_row($resultado);
-
-        var_dump($fila); echo '<br>';
-
-        
-
-
-
-
-
+        $num_filas= mysqli_num_rows($resultado);
+        echo(
+            "<table>
+                <tr>
+                    <td>ID<td/>
+                    <td>Apellido<td/>
+                    <td>Nombre<td/>
+                    <td>DNI<td/>
+                    <td>Email<td/>
+                <tr/>
+            <table/>"
+        );
+        //Recorre tabla.
+       for ($i=0; $i < $num_filas ; $i++) { 
+        $fila= mysqli_fetch_row($resultado);
+        echo(
+            "<table>
+                <tr>
+                    <td>"$resultado['id'];"<td/>
+                    <td>"$resultado['apellido'];"<td/>
+                    <td>"$resultado['nombre'];"<td/>
+                    <td>"$resultado['dni'];"<td/>
+                    <td>"$resultado['email'];"<td/>
+                <tr/>
+            <table/>"
+        );
+       }
+          
     };
 
     /*
