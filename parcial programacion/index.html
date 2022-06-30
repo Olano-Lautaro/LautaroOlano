@@ -8,11 +8,19 @@
     <script src="functions.js"></script>
 </head>
 <body>
-    DNI: <input type="text" id="dni"><br>
+    DNI: <input type="text" id="dni"><br><br>
 
-    <input type="button" value="Buscar" onclick="buscar_dni()">
+    <input type="button" value="Buscar" onclick="buscar_dni()"> <hr> <br>
 
-    <div id="cartel"></div>
+    <div id="cartel" style="text-align: center;" class="cartel_info"></div>
+    <br>
     <div id="info_socio"></div>
 </body>
+<style>
+    .cartel_info{
+        width: 200px;
+        height: 200px;
+        line-height: 12;
+    }
+</style>
 </html>
