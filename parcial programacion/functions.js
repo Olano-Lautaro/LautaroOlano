@@ -44,6 +44,13 @@ let socio5 = {
 }
 
 
+// buscar por el DNI si el socio existe, en caso de no existir mostrar e rojo "No Existe"..... si existe evaluar lo siguiente:
+// si tiene menos de 3 facturas mostrar en verde.
+// mas de 3 y menos de 6 mostrar en amarillo.
+// mas de 6 mostrar en rojo.
+// en todos los casos nombre y cantidad de facturas
+
+
 function buscar_dni() {
     //Array Socios
     let socios = [socio1, socio2, socio3, socio4, socio5]
@@ -64,7 +71,7 @@ function buscar_dni() {
         let flag = false
 
 
-        if (dni_socio == dni_buscado) {
+        if (dni_socio === dni_buscado) {
 
             // Cartel con informacion de facturas
             let info_facturas = document.getElementById('cartel').innerHTML = 'Facturas: ' + socios[i].facturas
@@ -108,7 +115,7 @@ function buscar_dni() {
 
             return flag;
         }
-
+        
         if (!flag) {
 
             console.log('Posición de array :' + i + ' no entró')
@@ -128,9 +135,3 @@ function buscar_dni() {
 
 
 
-
-// buscar por el DNI si el socio existe, en caso de no existir mostrar e rojo "No Existe"..... si existe evaluar lo siguiente:
-// si tiene menos de 3 facturas mostrar en verde.
-// mas de 3 y menos de 6 mostrar en amarillo.
-// mas de 6 mostrar en rojo.
-// en todos los casos nombre y cantidad de facturas
