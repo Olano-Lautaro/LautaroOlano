@@ -1,0 +1,10 @@
+//se necesita hacer un program q gestione empleados estos van a tener los sig datos: nombre apellido edad y salario (atributos)
+// y va a tener un plus= 300 es una constante, el sistema tendra dos tipos de empleados repartidor y comercial 
+//el comercial ademas de los atributos anteriores tiene uno llamado comision
+//el repartidor tendra un atributo  llamado zona 
+//las clases tendran un metodo llamado plus y en cada clase tendra una implementacion distinta.
+//este plus aumenta el salario del empleado.
+//los requisitos de comercial son: si tiene mas de 30 años y cobra una comision de mas de $200 se aplica el plus
+//y si es repartidor: si tiene menos de 25 años y reparte en la zona A, este empleado recibe el plus
+//crear una close ejecutable donde se creen distintos empleados y mostrar por pantalla el resultado.
+//plus es constante

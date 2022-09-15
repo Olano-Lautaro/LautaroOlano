@@ -11,14 +11,11 @@ include 'conexion.php';
     <title>Trabajo 11</title>
 </head>
 <body>
-
-    <form action="principal.php" method="post">
+    <div>
         <input type="text" name="dni" id="dni"> <br><br>
-        <input type="submit" value="Buscar">
-    </form>
-
+        <input type="button" value="Buscar">
+    </div>
     <div id="cartel" class="cartel" ></div>
-        
     <style>
         .cartel{
             width: 200px;
@@ -42,7 +39,7 @@ include 'conexion.php';
     <?php
     echo('Conexión establecida <br><br>');
 
-    $consulta=  "SELECT*   FROM socios";
+    $consulta=  "SELECT*   FROM Socios";
     
     $resultado= $conexion->query($consulta);
     
