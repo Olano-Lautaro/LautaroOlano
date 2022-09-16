@@ -1,0 +1,25 @@
+Hacer una pantalla donde pueda agregar 
+Nombre
+Apellido
+DNI
+Tipo --- Alumno -- o -- Docente
+Arancel: si es docente vale 1000 y si es alumno vale 500.
+Fecha nacimiento
+
+Mostrar en pantalla todos los datos
+----------------------------------------------------
+
+si es Docente y es mayor de 40 años o igual  tiene 10% descuento en Arancel.
+
+si es alumno y menor a 25 años o igual tiene un 25% de descuento en Arancel.
+
+si es cumpleaños del Alumno el arancel es 0
+
+si es cumpleaños del docente paga x2 el arancel.
+
+Class Persona clase padre, Docente y Alumno.
+
+Mostrar edad Clase TRAIT.
+
+
+Especificos al mostrar la información.
