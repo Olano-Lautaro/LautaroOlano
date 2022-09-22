@@ -41,9 +41,11 @@
         // }
 
 
-            $nombre= $_POST['nombre'];
+    $nombre= $_POST['nombre'];
 
-            echo 'Veni a dormir conmigo CULONA';
+    echo 'Veni a dormir conmigo CULONA';
+
+
 
 
 

@@ -9,15 +9,15 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <form action="index.php" method="post">
+    <form action="principal.php" method="post">
         Apellido: <input type="text" name="apellido" id="APELLIDO"><br>
         Nombre:   <input type="text" name="nombre" id="NOMBRE"><br>
         Edad:     <input type="number" name="edad" id="EDAD"><br>
         Salario:  <input type="number" name="salario" id="SALARIO"><br>
         Tipo: <select name="tipo" id="TIPO" onchange="tipoEmpleado(this.value)">
             <option value="">Seleccione un tipo</option>
-            <option value="repartidor">Repartidor</option>
-            <option value="comerciante">Comerciante</option>
+            <option value="Repartidor">Repartidor</option>
+            <option value="Comerciante">Comerciante</option>
         </select>
         <br>
         <div id="seguntipo">
