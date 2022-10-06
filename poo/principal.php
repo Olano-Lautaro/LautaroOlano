@@ -1,6 +1,6 @@
 <?php
     include 'Empleado.php';
-    include 'Comerciante.php';
+    include 'Comercial.php';
     include 'Repartidor.php';
 
     $tipo=$_POST["tipo"];
@@ -8,6 +8,10 @@
     $nombre=$_POST["nombre"];
     $edad=$_POST["edad"];
     $salario=$_POST["salario"];
+
+    $datos= 'Nombre Completo: '.$apellido.' '.$nombre.'<br>
+    Edad: '.$edad.'<br>
+    Salario: '.$salario.'<br>'
 
     
 ?>
@@ -31,19 +35,31 @@
         Datos del 
         <?php 
             echo $tipo; 
-        ?> : <br>
+        ?> : <br><br>
         <?php
         if ($tipo=='Repartidor'){
             $zona=$_POST['zona'];
-            $repartidor= New Repartidor(
-            New Empleado($nombre,$apellido,$edad,$salario),$zona);
+            $repartidor= New Repartidor($nombre,$apellido,$edad,$salario);
+
+            echo ($datos.
+                'Zona en la que reparte: '.$zona.
+                
+                $repartidor->setPlus($edad,$salario)
+            );
+
+            
         }else{
             $comision=$_POST['comision'];
-            $comercial= New Comercial(
-            New Empleado($nombre,$apellido,$edad,$salario),$comision);
-            }
+            $comercial= New Comercial($nombre,$apellido,$edad,$salario);
+
+            echo ($datos.
+                'Comisión que cobra: '.$comision.'<hr>'
+            );
+
+            $comercial->setPlus($edad,$salario);
+        }
         ?>
-    }
+    
     </div>
     
 </body>

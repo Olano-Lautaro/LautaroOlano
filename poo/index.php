@@ -41,9 +41,9 @@
         // }
 
 
-    $nombre= $_POST['nombre'];
+   phpinfo();
 
-    echo 'Veni a dormir conmigo CULONA';
+    
 
 
 

@@ -3,21 +3,18 @@
 
     class Repartidor extends Empleado{
 
-        public $repartidor;
         public $zona;
 
-        public function __construct(Empleado $repartidor, $zona){
-            $this->repartidor   =   $repartidor;
-            $this->zona =   $zona;
-        }
+       
 
         public function getPlus(){ 
             return $this->zona;
         }   
    
-        public function setPlus(){
-            $edad= $this->repartidor->edad;
-            if ( $edad<=25 && $zona="A"){
+        public function setPlus($edad,$salario){
+            $condicion='A';
+            
+            if ( ($this->edad)<=25 && ($this->zona)===$condicion){
                 echo("recibe el plus");
             }   
         }

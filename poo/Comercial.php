@@ -3,22 +3,25 @@
 
 class Comercial extends Empleado{
     public $comision;
-    public function __construct(Empleado $comercial, $comision)
-    {
-       $this->comercial =   $comercial; 
-       $this->comision  =   $comision;
-    }
+    
     
 
     public function getPlus(){ 
     return $this->comision;
     }
   
-   public function setPlus(){
-       $edad= $this->comercial->edad;
-        if ($edad>=30 && $comision=200){
-           echo("recibe el plus");
+   public function setPlus($edad, $salario){
+       $condicion=200;
+       $total=0;
+       if (($this->edad)>=30 && ($this->comision)===$condicion){  
+           echo("Recibe el plus <br>");
+           $total= $this->salario+Empleado::$PLUS;
+           echo 'Total: '.$total;
+       }else{
+            echo ("No recibe plus");
+            
        }
+       
    }
 
    public function getDatos(){

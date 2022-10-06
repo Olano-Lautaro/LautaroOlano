@@ -5,7 +5,7 @@ class Empleado{
     public $apellido;
     public $edad;
     public $salario;
-    public const PLUS= 300; 
+    public static $PLUS=300; 
 
     public function __construct($nombre,$apellido,$edad,$salario){
       $this->nombre= $nombre;
@@ -50,6 +50,20 @@ class Empleado{
     public function getFullName(){
       return $this->nombre." ".$this->apellido;
     }
+
+    public function setPlus($edad, $salario){
+      $condicion='';
+      $total=0;
+      if ($this->edad && $condicion ){  
+          echo("Recibe el plus <br>");
+          $total= $this->salario+$this->PLUS;
+          echo 'Total: '.$total;
+      }else{
+           echo ("No recibe plus");
+           
+      }
+    }  
+  
 }
 //$empleado= new Empleado("Lautaro","Olano","20",200,300);
 //echo $empleado->getFullName();
