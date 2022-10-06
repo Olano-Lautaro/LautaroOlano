@@ -1,25 +1,56 @@
 <?php
-    Class Persona{
-        Public $strApellido;
-        Public $strNombre;
-        Public $intDNI;
-        Public $fech_nac;
+    require_once ("Edad.php");
 
-        Public function __construct( string $strApellido, string $strNombre, int $intDNI, $fech_nac ){
+    Class Persona{
+        use Edad;
+        public $strApellido;
+        public $strNombre;
+        public $intDNI;
+        public $fech_nac;
+        
+
+        public function __construct( string $strApellido, string $strNombre, int $intDNI, $fech_nac ){
             $this->apellido=$strApellido;
             $this->nombre=$strNombre;
             $this->DNI=$intDNI;
-            $this->$fech_nac;
+            $this->fecha_nacimiento=$fech_nac;
         }
+
 
         public function setNombre($strNombre){
             $this->nombre=$strNombre;
         }
 
+        public function setApellido($strApellido){
+            $this->apellido=$strApellido;
+        }
 
-        Public function getNombreCompleto(){
-            $info= $this->apellido." ".$this->nombre;
+        public function setDNI($intDNI){
+            $this->DNI=$intDNI;
+        }
+
+        public function setFechNac($fech_nac){
+            $this->fecha_nacimiento=$fech_nac;
+        }
+
+
+        public function getNombre(){
+            $info=$this->nombre;
             return $info;
         }
+
+        public function getCumpleaños( Datetime $fecha){
+
+            $fechaHoy= new DateTime();
+
+
+            if ($fecha==$fechaHoy->format('Y-m-d')){
+                return 'Cumple';
+            }
+            else{
+                return 'No Cumple';
+            }
+        }
     }
+
 ?>
