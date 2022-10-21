@@ -6,16 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="function.js"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <form action="Principal.php" method="post">
+    <form action="principal.php" method="post">
             Apellido: <input type="text" name="apellido" id="APELLIDO"><br>
             Nombre: <input type="text" name="nombre" id="NOMBRE"><br>
             DNI: <input type="number" name="dni" id="DNI"><br>
             Fecha de Nacimineto: <input type="date" name="fecha_nac" id="FECHA_NAC"><br>
             Tipo: <select name="tipo" id="TIPO" onchange="TipoPersona(this.value)">
-                <option value="alumno">Alumno</option>
-                <option value="docente">Docente</option>
+                <option value="">Seleccione una opción</option>
+                <option value="Alumno">Alumno</option>
+                <option value="Docente">Docente</option>
             </select>
             <div name="arancel" id="ARANCEL">Arancel: </div>
             <br>
