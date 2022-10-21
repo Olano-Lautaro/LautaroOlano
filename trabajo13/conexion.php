@@ -1,6 +1,6 @@
 <?php
     $usuario='root';
-    $pass=' ';
+    $pass='';
     $server='localhost';
     $db='rickandmorty';
 
@@ -9,4 +9,5 @@
     if  ($conexion->    connect_errno){
         //ERROR
         echo ('Error de conexión con la Base de datos');
+    }
 ?>

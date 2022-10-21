@@ -32,15 +32,22 @@ function rickAndMorty(){
         document.getElementById('info').innerHTML= html
 
         //Insertar datos en el formulario
-        document.getElementById('nombre').value= nombre
-        document.getElementById('genero').value= genero
-        document.getElementById('creado').value= creado
-        document.getElementById('especie').value= especie
-        document.getElementById('tipo').value= tipo
-        document.getElementById('origen').value= origen
-        document.getElementById('localidad').value= localidad
-        document.getElementById('apariencia').value= apariencia
-        document.getElementById('idPersonaje').value= id_personaje      
+        document.getElementById('nombre').value=nombre
+        document.getElementById('genero').value=genero
+        document.getElementById('creado').value=creado
+        document.getElementById('especie').value=especie
+        document.getElementById('tipo').value=tipo
+        document.getElementById('origen').value=origen
+        document.getElementById('localidad').value=localidad
+        document.getElementById('apariencia').value=apariencia
+        document.getElementById('idPersonaje').value=id_personaje
 
-    });
+       
+        
+        
+        
+
+    })
+    
+
 }
