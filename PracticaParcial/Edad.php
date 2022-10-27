@@ -1,15 +1,16 @@
-<?php 
-    trait Edad{
-    
-        public function getEdad($fechaNac){
-            
-            $fechaHoy= new DateTime();
-            $interval=$fechaNac->diff($fechaHoy);
-            $info= $interval->format('%y');
-            return $info;
-        } 
-        
+<?php
+trait Edad
+{
+
+    public function getEdad($fechaNac)
+    {
+
+        $fechaHoy = new DateTime();
+        $interval = $fechaNac->diff($fechaHoy);
+        $info = $interval->format('%y');
+        return $info;
     }
+}
 ?>
 
 <!-- FECHAS 
@@ -36,6 +37,3 @@
 
            $interval2= $fech_nacimiento->diff($fecha_hoy);
            echo $interval2->format('%y');-->
-
-
-       
