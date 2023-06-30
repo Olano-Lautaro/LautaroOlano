@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificador de Triangulo</title>
+</head>
+<body>
+    <h1>ingresa los 3 datos</h1>
+    
+    A: <input type="number" name="" id="A"><br>
+    B: <input type="number" name="" id="B"><br>
+    C: <input type="number" name="" id="C"><br>
+
+    <input type="submit" value="Verificar Triángulo" onclick="TipoTriangulo()">
+    
+
+    <script>
+        function TipoTriangulo($a,$b,$c){
+            $a= document.getElementById('A').value;
+            $b= document.getElementById('B').value;
+            $c= document.getElementById('C').value;
+
+    
+            
+            if ($a==$b && $b==$c)  {
+                return alert('Es un triangulo equilatero');
+            } 
+            if  ($a!=$b && $b==$c || $a!=$c && $a==$b || $c!=$b && $c==$a){
+                return alert('Es un triangulo isosceles');
+            }
+             if  ($a!=$c && $b!=$a){
+                return alert('Es un triangulo escaleno');
+            }
+        };
+    </script>
+
+</body>
+</html>
